@@ -423,48 +423,48 @@ background-size: cover;
 background-position: center center;
 padding: 100px 20px;
 }
-  
+
 .contacto .contenido-seccion {
     max-width: 600px;
     margin: auto;
-  }
-  
-  .contacto h2 {
+}
+    
+.contacto h2 {
     text-align: center;
     margin-bottom: 20px;
-  }
-  
-  .campo-formulario {
+}
+
+.campo-formulario {
     margin-bottom: 20px;
-  }
-  
-  label {
+}
+
+label {
     display: block;
     font-weight: bold;
     margin-bottom: 5px;
-  }
-  
-  input,
-  textarea {
+}
+
+input,
+textarea {
     width: 100%;
     padding: 10px;
     border: 1px solid #ccc;
     border-radius: 4px;
-  }
-  
-  button[type="submit"] {
+}
+
+button[type="submit"] {
     background-color: #fe5000;
     color: #fff;
     padding: 10px 20px;
     border: none;
     border-radius: 4px;
     cursor: pointer;
-  }
-  
-  button[type="submit"]:hover {
+}
+
+button[type="submit"]:hover {
     background-color: #e66e00;
-  }
-  
+}
+
 
 /* FOOTER */
 footer {
