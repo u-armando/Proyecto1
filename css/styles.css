@@ -92,19 +92,35 @@ body{
     letter-spacing: 3px;
     text-transform: none;
 }
-.inicio .info .btn-mas{
-    width: 50px;
-    margin: auto;
-    height: 50px;
-    border: 2px solid #fe5000;
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    border-radius: 50%;
-    color: #fe5000;
-    margin-top: 50px;
-    text-decoration:solid;
-} 
+.inicio .info .scroll-indicator {
+    position: fixed;
+    bottom: 100px;
+    left: 50%;
+    transform: translateX(-50%);
+    z-index: 9999;
+    cursor: pointer;
+}
+.inicio .info .scroll-indicator .arrow {
+    display: block;
+    width: 40px;
+    height: 40px;
+    border: solid white;
+    border-width: 0 3px 3px 0;
+    transform: rotate(45deg);
+    animation: arrowBounce 1s infinite alternate;
+}
+
+@keyframes arrowBounce {
+    0% {
+    transform: rotate(45deg) translateY(0);
+    }
+    50% {
+    transform: rotate(45deg) translateY(10px);
+    }
+    100% {
+    transform: rotate(45deg) translateY(0);
+    }
+}
 .opciones{
     position: absolute;
     display: flex;
@@ -305,16 +321,21 @@ line-height: 28px;
     display: block;
     margin: auto;
 }
+
 .equipo .fila .info{
     border: 2px solid #1f283e;
     text-align: center;
-    border-radius: 5px;
-    padding: 20px;
+    border-radius: 2px;
+    padding: 10px;
     background: linear-gradient( #fe5000, #e68d64);
     color: #fff;
+    transition: transform 0.3s ease; /* Añade una transición suave */
+}
+.equipo .fila .info:hover {
+    transform: scale(1.1); /* Aplica un zoom de 1.2 (10% más grande) al colocar el cursor sobre la imagen */
 }
 .equipo .fila .info p{
-    margin: 20px 0;
+    margin: 10px 0;
 }
 .equipo .fila .info a{
     color: #fff;
@@ -436,4 +457,94 @@ footer .info a{
 }
 .texto-derecha {
     text-align: right;
+}
+
+
+/* RESPONSIVE */
+
+@media only screen and (max-width: 900px) {
+    header nav{
+        position: initial;
+        display: none;
+        transform: translate(0);
+    }
+    header .redes{
+        display: none;
+    }
+    .nav-responsive{
+        display: block;
+    }
+    nav.responsive{
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        position:absolute;
+        left: 0;
+        top: 0;
+        width: 100%;
+        height: 100vh;
+        background-color:#151623;
+        z-index: 99;
+    }
+    nav.responsive a{
+        display: block;
+        width: fit-content;
+        margin: 10px auto;
+        font-size: 30px;
+    }
+    .inicio .opciones{
+        display: none;
+    }
+    .nosotros .fila{
+        display: block;
+    }
+    .nosotros .fila .col{
+        width: 100%;
+        margin: auto;
+    }
+    .nosotros .fila .col img{
+        max-width: 200px;
+        display: block;
+        margin: auto;
+    }
+    .servicios .contenido-seccion .fila{
+        display: block;
+    }
+    .servicios .contenido-seccion .fila .col{
+    width: 100%;
+    }
+    .equipo .fila{
+        display: block;
+    }
+    .equipo .fila .col{
+        width: 100%;
+        margin-bottom: 20px;
+    }
+    .equipo .fila .col img{
+        max-height: 350px;
+    }
+    .equipo .fila .info{
+        max-width: 250px;
+        margin: auto;
+    }
+    .contacto .fila{
+        display: block;
+    }
+    .contacto .fila .col{
+        width: 100%;
+        margin-bottom: 20px;
+    }
+    .contacto .fila-datos{
+        display: block;
+    }
+    .contacto .fila-datos .col{
+        margin-bottom: 20px;
+    }
+    footer .info{
+        display: block;
+        text-align: center;
+    }
+    footer .info p{
+        margin-bottom: 10px;
+    }
 }
