@@ -553,41 +553,7 @@ text-align: right;
     width: 90%;
     margin: auto;
     }
-    /* SECCION CONTACTO */
-
-    .contacto {
-    /* ...otros estilos... */
-    padding-right: 30px;
-    padding-left: 30px;
-    }
     
-    .contacto .contenido-seccion {
-    /* ...otros estilos... */
-    padding-right: 20px;
-    padding-left: 20px;
-    }
-    
-    .contacto .fila {
-    flex-wrap: wrap;
-    }
-    
-    .contacto .fila .col {
-    width: 100%;
-    }
-    .contacto .fila .col input[type="email"],
-    .contacto .fila .col input[type="text"] {
-    margin-bottom: 10px;
-    }
-    
-    .contacto .fila-datos {
-    flex-direction: column;
-    align-items: center;
-    margin-top: 40px;
-    }
-    
-    .contacto .fila-datos .col {
-    margin-bottom: 20px;
-    }
     
     /* FOOTER */
     footer .info {
