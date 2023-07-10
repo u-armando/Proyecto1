@@ -527,6 +527,7 @@ text-align: right;
 
 /* SECCION RESPONSIVE */
 @media only screen and (max-width: 900px) {
+/* MENU */
     header nav {
     display: none;
     }
@@ -552,8 +553,13 @@ text-align: right;
     margin: 10px auto;
     font-size: 30px;
     }
+    /* SECCION INICIO */
     .inicio .contenido-seccion .info {
     padding-bottom: 80px;
+    }
+/* SECCION HABILIDADES */
+    .habilidades {
+        background-attachment: fixed;
     }
     .habilidades .contenido-seccion .fila{
         display: block;
@@ -565,6 +571,8 @@ text-align: right;
     .habilidades .contenido-seccion .fila .col .cont-barra{
         justify-content: center;
     }
+
+    /* SECCION SOBRE MI */
     .sobremi .contenido-seccion .fila .col {
     width: 100%;
     margin: auto;
@@ -610,6 +618,7 @@ text-align: right;
     margin-bottom: 20px;
     }
     
+    /* FOOTER */
     footer .info {
     flex-direction: column;
     text-align: center;
