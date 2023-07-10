@@ -9,8 +9,8 @@
     <title>ARMANDO URBINA</title>
 </head>
 <body>
-   <!-- MENU -->
-   <div class="contenedor-header">
+    <!-- MENU -->
+    <div class="contenedor-header">
     <header>
         
         <nav id="nav">
@@ -234,33 +234,31 @@
 <!-- SECCION CONTACTO -->
 <section class="contacto" id="contacto">
     <div class="contenido-seccion">
-        <div class="contenedor-titulo">
-            
-            <div class="info">
-                
-                <h2>CONTACTO</h2>
-            </div>
+      <h2>Contacto</h2>
+      <form action="https://formsubmit.co/armando.u26@email.com" method="POST">
+        <div class="campo-formulario">
+          <label for="nombre">Nombre:</label>
+          <input type="text" id="nombre" name="nombre" required>
         </div>
-        <div class="fila">
-            <div class="col">
-                <input type="text" placeholder="Email">
-            </div>
-            <div class="col">
-                <input type="text" placeholder="Nombre">
-            </div>
+        <div class="campo-formulario">
+          <label for="correo">Correo electrónico:</label>
+          <input type="email" id="correo" name="correo" required>
         </div>
-        <div class="mensaje">
-            <textarea name="" id="" cols="30" rows="10" placeholder="Mensaje"></textarea>
-            <button>Enviar Mensaje</button>
+        <div class="campo-formulario">
+          <label for="mensaje">Mensaje:</label>
+          <textarea id="mensaje" name="mensaje" rows="5" required></textarea>
         </div>
-        
+        <div class="campo-formulario">
+          <button type="submit">Enviar Mensaje</button>
+        </div>
+      </form>
     </div>
-
-</section>
+  </section>
+  
 
     <footer>
         <div class="info">
-            <p>  Todos los derechos reservados - 2023 </p>
+            <p>  Todos los derechos reservados &copy; - 2023 </p>
             <p class="texto-derecha">Realizado Por: Armando Urbina</p>
             <div class="redes">
                 <a href="https://www.facebook.com/armando.urbina.142"><i class="fa-brands fa-facebook-f"></i></a>
