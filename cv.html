@@ -9,14 +9,16 @@
     <title>ARMANDO URBINA</title>
 </head>
 <body>
-    <!-- MENU -->
-    <div class="contenedor-header">
-        <header>
-                <nav id="nav">
+   <!-- MENU -->
+   <div class="contenedor-header">
+    <header>
+        
+        <nav id="nav">
                 <a href="#inicio" onclick="seleccionar()">Inicio</a>
                 <a href="#sobremi" onclick="seleccionar()">Sobre mi</a>
                 <a href="#habilidades" onclick="seleccionar()">Habilidades</a>
-                <a href="#resumen" onclick="seleccionar()">Resumen</a>
+                <a href="#servicios" onclick="seleccionar()">Servicios</a>
+                <a href="#portafolio" onclick="seleccionar()">Portafolio</a>
                 <a href="#contacto" onclick="seleccionar()">Contacto</a>
                 <a href="index.html" onclick="seleccionar()">POWER GYM</a>
             </nav>
@@ -30,12 +32,12 @@
     <section class="inicio" id="inicio">
         <div class="contenido-seccion">
                 <div class="info">
-                <h1>ARMANDO URBINA</h1>
+                <h1>Armando Urbina</h1>
                 <h2>TSU EN INFORMÁTICA, DISEÑADOR, PROFESIONAL</h2>
                 <div class="redes">
                     <a href="https://www.facebook.com/armando.urbina.142"><i class="fa-brands fa-facebook-f"></i></a>
                     <a href="https://www.instagram.com/armando.urbina/"><i class="fa-brands fa-square-instagram"></i></a>
-                    <a href="#"><i class="fa-brands fa-linkedin-in"></i></a>
+                    <a href="https://www.linkedin.com/in/armando-urbina-28669ab4/"><i class="fa-brands fa-linkedin-in"></i></a>
                 </div>
             </div>
             <div class="foto">
@@ -67,6 +69,13 @@
                     <i class="fa-solid fa-flag"></i>
                     <span class="titulo-detalle">Intereses</span>
                     <p>Además de mi pasión por la tecnología y la informática, tengo intereses en Diseño Gráfico, Programación, Colaboración y trabajo en equipo, y Desarrollo Personal, que complementan mi perfil profesional.</p>
+                </div>
+            </div>
+            <div class="contenido-seccion">
+                <div class="boton-descargar">
+                    <a href="doc/Armando Urbina curriculo .pdf" download>
+                        <button>Ver Resumen</button>
+                    </a>
                 </div>
             </div>
         </div>
@@ -145,187 +154,122 @@
             </div>
         </div>
     </section>
-
-    <!-- SECCION RESUMEN -->
-    <section class="resumen" id="resumen">
-        <div class="contenido-seccion">
-            <h3>Resumen </h3>
+    <!-- SECCION SERVICIOS -->
+    <section class="services" id="servicios">
+        <div class="titulo">
+            <h3>Servicios</h3>
+            <p>Te ayudo a alcanzar tus objetivos en línea</p>
+            <div aria-label="Seção apenas de ilustrações de botões">
+                <span></span>
+                <span></span>
+                <span></span>
+            </div>
+        </div>
+        <div class="my_services">
+            <ul aria-label="Navegacion secundaria">
+                <li>
+                    <i class="fa-sharp fa-solid fa-pen-to-square"></i>
+                    <h3>Diseño web</h3>
+                    <p> Nuestro enfoque se centra en la usabilidad, el diseño responsivo y la optimización</p>
+                </li>
+                <li>
+                    <i class="fa-solid fa-globe"></i>
+                    <h3>Desarrollador web</h3>
+                    <p>Construimos sitios web personalizados que se adaptan a tus necesidades </p>
+                </li>
+                <li>
+                    <i class="fa-sharp fa-solid fa-palette"></i>
+                    <h3>Diseño Grafico</h3>
+                    <p>Damos vida a tus ideas a través de un diseño gráfico innovador y cautivador.</p>
+                </li>
+            </ul>
+        </div>
+    </section>
+        <!-- SECCION PORTAFOLIO -->
+        <section class="projects" id="portafolio">
+            <div class="titulo">
+                <h3>PORTAFOLIO</h3>
+                <p>Algunos de mis Trabajos</p>
+            </div>
+            <div class="project_models">
+                <ul class="project_navegacao" aria-label="Navegação entre modelos específicos de projetos">
+                    <li class="all">Todos</li>
+                    <li class="design">Diseño</li>
+                    <li class="graphic">Logos</li>
+                    <li class="website">Websites</li>
+                </ul>
+            </div>
+            <div class="projects_armazenamento">
+                <ul aria-label="Navegación de proyectos y websites">
+                    <li class="design"><img src="img/PLDS.jpg" alt="Invitación Primaria LDS" id="design"></li>
+                    <li class="design"><img src="img/PCB.jpg" alt="Portada Coloring Book" id="design"></li>
+                    <li class="design"><img src="img/CDCM.jpg" alt="Invitación Conferencia DCM" id="design"></li>
+                    <li class="design"><img src="img/JE.jpg" alt="Invitación Cena Especial" id="design"></li>
+                    <li class="graphic"><img src="img/HS.jpg" alt="Logo Harsan Creative Color" id="graphic"></li>
+                    <li class="graphic"><img src="img/PG.jpg" alt="Logo Power GYM" id="graphic"></li>
+                    <li class="website"><img src="img/GYM.jpg" alt="Website de un GYM" id="website"></li>
+                    <li class="website"><img src="img/Portafolio.jpg" alt="Portafolio de Website" id="website"></li>
+                </ul>
+            </div>
+            <a href="#">Cargar más proyectos</a>
+        </section>
+        
+        <script>
+            const filters = document.querySelectorAll('.project_navegacao li');
+            const projects = document.querySelectorAll('.projects_armazenamento li');
+        
+            filters.forEach(filter => {
+                filter.addEventListener('click', () => {
+                    const category = filter.classList[0];
+                    projects.forEach(project => {
+                        project.style.display = 'none';
+                        if (project.classList.contains(category) || category === 'all') {
+                            project.style.display = 'block';
+                        }
+                    });
+                });
+            });
+        </script>
+        
+<!-- SECCION CONTACTO -->
+<section class="contacto" id="contacto">
+    <div class="contenido-seccion">
+        <div class="contenedor-titulo">
+            
             <div class="info">
-                <div class="col">
-                    <span class="titulo">Educación</span>
-                    <table>
-                        <tr>
-                            <td class="datos">
-                                <h3>2006 - 2010</h3>
-                            </td>
-                            <td rowspan="2" class="descripcion">
-                                Lorem ipsum dolor sit amet consectetur adipisicing elit. Vero at soluta quos explicabo dolor recusandae, dolorum.
-                            </td>
-                        </tr>
-                        <tr>
-                            <td>
-                                <h4>Lic. en computación</h4>
-                                <p>Universidad de San Juan</p>
-                                <span class="promedio">8.9 PG</span>
-                            </td>
-                        </tr>
-                    </table>
-                    <table>
-                        <tr>
-                            <td class="datos">
-                                <h3>2010 - 2015</h3>
-                            </td>
-                            <td rowspan="2" class="descripcion">
-                                Lorem ipsum dolor sit amet consectetur adipisicing elit. Vero at soluta quos explicabo dolor recusandae, dolorum.
-                            </td>
-                        </tr>
-                        <tr>
-                            <td>
-                                <h4>Programador FS</h4>
-                                <p>Udemy Cursos</p>
-                                <span class="promedio">8.9 PG</span>
-                            </td>
-                        </tr>
-                    </table>
-                    <table>
-                        <tr>
-                            <td class="datos">
-                                <h3>2010 - 2015</h3>
-                            </td>
-                            <td rowspan="2" class="descripcion">
-                                Lorem ipsum dolor sit amet consectetur adipisicing elit. Vero at soluta quos explicabo dolor recusandae, dolorum.
-                            </td>
-                        </tr>
-                        <tr>
-                            <td>
-                                <h4>Programador FS</h4>
-                                <p>Udemy Cursos</p>
-                                <span class="promedio">8.9 PG</span>
-                            </td>
-                        </tr>
-                    </table>
-                    <table>
-                        <tr>
-                            <td class="datos">
-                                <h3>2010 - 2015</h3>
-                            </td>
-                            <td rowspan="2" class="descripcion">
-                                Lorem ipsum dolor sit amet consectetur adipisicing elit. Vero at soluta quos explicabo dolor recusandae, dolorum.
-                            </td>
-                        </tr>
-                        <tr>
-                            <td>
-                                <h4>Programador FS</h4>
-                                <p>Udemy Cursos</p>
-                                <span class="promedio">8.9 PG</span>
-                            </td>
-                        </tr>
-                    </table>
-                </div>
-                <div class="col">
-                    <span class="titulo">Experiencia Laboral</span>
-                    <table>
-                        <tr>
-                            <td class="datos">
-                                <h3>3 Años</h3>
-                            </td>
-                            <td rowspan="2" class="descripcion">
-                                Lorem ipsum dolor sit amet consectetur adipisicing elit. Vero at soluta quos explicabo dolor recusandae, dolorum.
-                            </td>
-                        </tr>
-                        <tr>
-                            <td>
-                                <h4>Mercado Libre</h4>
-                                <p>Programador Junior</p>
-                            
-                            </td>
-                        </tr>
-                    </table>
-                    <table>
-                        <tr>
-                            <td class="datos">
-                                <h3>2 Años</h3>
-                            </td>
-                            <td rowspan="2" class="descripcion">
-                                Lorem ipsum dolor sit amet consectetur adipisicing elit. Vero at soluta quos explicabo dolor recusandae, dolorum.
-                            </td>
-                        </tr>
-                        <tr>
-                            <td>
-                                <h4>Software Inc.</h4>
-                                <p>Diseñadr Principal</p>
-                            </td>
-                        </tr>
-                    </table>
-                    <table>
-                        <tr>
-                            <td class="datos">
-                                <h3>2 Años</h3>
-                            </td>
-                            <td rowspan="2" class="descripcion">
-                                Lorem ipsum dolor sit amet consectetur adipisicing elit. Vero at soluta quos explicabo dolor recusandae, dolorum.
-                            </td>
-                        </tr>
-                        <tr>
-                            <td>
-                                <h4>Software Inc.</h4>
-                                <p>Diseñadr Principal</p>
-                            </td>
-                        </tr>
-                    </table>
-                    <table>
-                        <tr>
-                            <td class="datos">
-                                <h3>2 Años</h3>
-                            </td>
-                            <td rowspan="2" class="descripcion">
-                                Lorem ipsum dolor sit amet consectetur adipisicing elit. Vero at soluta quos explicabo dolor recusandae, dolorum.
-                            </td>
-                        </tr>
-                        <tr>
-                            <td>
-                                <h4>Software Inc.</h4>
-                                <p>Diseñadr Principal</p>
-                            </td>
-                        </tr>
-                    </table>
-                </div>
+                
+                <h2>CONTACTO</h2>
             </div>
         </div>
-    </section>
-
-    <!-- SECCION CONTACTO -->
-    <section class="contacto" id="contacto">
-        <div class="contenido-seccion">
-            <h3> contacto</h3>
-
-            <div class="fila">
-                <div class="col">
-                    <h2>
-                        <i class="fa-solid fa-phone"></i> Teléfono
-                    </h2>
-                    <span class="info-contacto">+55 (44) - 998446296</span>
-                </div>
-                <div class="col">
-                    <h2>
-                        <i class="fa-solid fa-envelope"></i> Correo
-                    </h2>
-                    <span class="info-contacto">armando.u26@gmail.com</span>
-                </div>
-                <div class="col">
-                    <h2>
-                        <i class="fa-solid fa-thumbs-up"></i> Redes Sociales
-                    </h2>
-                        <div class="redes">
-                            <a href="https://www.facebook.com/armando.urbina.142"><i class="fa-brands fa-facebook-f"></i></a>
-                            <a href="https://www.instagram.com/armando.urbina/"><i class="fa-brands fa-square-instagram"></i></a>
-                            <a href="#"><i class="fa-brands fa-linkedin-in"></i></a>
-                        </div>
-                </div>
+        <div class="fila">
+            <div class="col">
+                <input type="text" placeholder="Email">
+            </div>
+            <div class="col">
+                <input type="text" placeholder="Nombre">
             </div>
         </div>
-    </section>
+        <div class="mensaje">
+            <textarea name="" id="" cols="30" rows="10" placeholder="Mensaje"></textarea>
+            <button>Enviar Mensaje</button>
+        </div>
+        
+    </div>
 
+</section>
+
+    <footer>
+        <div class="info">
+            <p>  Todos los derechos reservados - 2023 </p>
+            <p class="texto-derecha">Realizado Por: Armando Urbina</p>
+            <div class="redes">
+                <a href="https://www.facebook.com/armando.urbina.142"><i class="fa-brands fa-facebook-f"></i></a>
+                <a href="https://www.instagram.com/armando.urbina/"><i class="fa-brands fa-instagram"></i></a>
+                <a href="https://www.linkedin.com/in/armando-urbina-28669ab4/"><i class="fa-brands fa-linkedin"></i></a>
+                
+            </div>
+        </div>
+    </footer>
     <script src="js/curriculo.js"></script>
 </body>
 </html>
