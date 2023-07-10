@@ -514,6 +514,7 @@ padding: 0 20px;
 footer .info p {
 color: #797e8e;
 }
+
 footer .info a {
 text-decoration: none;
 color: #797e8e;
@@ -526,16 +527,13 @@ text-align: right;
 
 /* SECCION RESPONSIVE */
 @media only screen and (max-width: 900px) {
-    header nav{
-    position: initial;
+    header nav {
     display: none;
-    transform: translate(0);
     }
-
+    
     .nav-responsive {
     display: block;
     }
-
     nav.responsive {
     display: flex;
     flex-direction: column;
@@ -548,49 +546,14 @@ text-align: right;
     background-color: #151623;
     z-index: 99;
     }
-
     nav.responsive a {
     display: block;
     width: fit-content;
     margin: 10px auto;
     font-size: 30px;
     }
-
-    .inicio .contenido-seccion .info h1 {
-    font-size: 2rem;
-    letter-spacing: 1px;
-    padding-top: 80px;
-    }
-
-    .inicio .contenido-seccion .info h2 {
-    font-size: 16px;
-    margin-top: -10px;
-    letter-spacing: 1px;
-    }
-
-    .sobremi .contenido-seccion .fila {
-    display: block;
-    }
-
-    .sobremi .contenido-seccion .fila .col {
-    width: 80%;
-    margin: auto;
-    margin-top: 20px;
-    }
-
-    .resumen .contenido-seccion .info .col {
-    width: 90%;
-    margin: auto;
-    }
-    
-    .resumen .contenido-seccion .info .col .titulo {
-    display: block;
-    text-align: center;
-    }
-    
-    .resumen .contenido-seccion .info .col table {
-    margin-top: 10px;
-    margin-bottom: 30px;
+    .inicio .contenido-seccion .info {
+    padding-bottom: 80px;
     }
     .habilidades .contenido-seccion .fila{
         display: block;
@@ -602,17 +565,45 @@ text-align: right;
     .habilidades .contenido-seccion .fila .col .cont-barra{
         justify-content: center;
     }
+    .sobremi .contenido-seccion .fila .col {
+    width: 100%;
+    margin: auto;
+    margin-top: 20px;
+    }
+    .resumen .contenido-seccion .info .col {
+    width: 90%;
+    margin: auto;
+    }
+    /* SECCION CONTACTO */
+
+    .contacto {
+    /* ...otros estilos... */
+    padding-right: 30px;
+    padding-left: 30px;
+    }
+    
+    .contacto .contenido-seccion {
+    /* ...otros estilos... */
+    padding-right: 20px;
+    padding-left: 20px;
+    }
+    
     .contacto .fila {
-    display: block;
+    flex-wrap: wrap;
     }
     
     .contacto .fila .col {
     width: 100%;
-    margin-bottom: 20px;
+    }
+    .contacto .fila .col input[type="email"],
+    .contacto .fila .col input[type="text"] {
+    margin-bottom: 10px;
     }
     
     .contacto .fila-datos {
-    display: block;
+    flex-direction: column;
+    align-items: center;
+    margin-top: 40px;
     }
     
     .contacto .fila-datos .col {
@@ -620,26 +611,18 @@ text-align: right;
     }
     
     footer .info {
-    display: block;
+    flex-direction: column;
     text-align: center;
     }
-    
-    footer .info p {
-    margin-bottom: 10px;
+    footer .info .texto-derecha {
+    flex-direction: column;
+    text-align: center;
     }
-    .contenedor-header {
-        max-width: 100%;
+    footer .info a {
+    margin: 10px 0;
     }
-    .inicio .contenido-seccion,
-    .sobremi .contenido-seccion,
-    .resumen .contenido-seccion,
-    .habilidades .contenido-seccion,
-    .contacto .contenido-seccion,
-    footer .info {
-        max-width: 100%;
-    }
-    .projects_armazenamento ul li img {
-        max-width: 100%;
+    footer .info .redes a {
+        font-size: 24px;
+        margin-right: 10px;
     }
 }
-
